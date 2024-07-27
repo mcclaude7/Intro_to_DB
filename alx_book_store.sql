@@ -1,3 +1,7 @@
+
+CREATE DATABASE alx_book_store;
+USE alx_book_store;
+
 CREATE TABLE Books(
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
