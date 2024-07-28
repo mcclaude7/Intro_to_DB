@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS Books(
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(250) NOT NULL,
     author_id INT,
+    price DOUBLE,
     publication_date DATE,
     FOREIGN KEY (author_id) REFERENCES (author_id)
 );
