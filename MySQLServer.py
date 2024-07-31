@@ -16,7 +16,7 @@ def create_database():
             print("Database 'alx_book_store' created successfully!")
 
 
-          except Error as e:
+          except mysql.connector.Error as e:
             if "1007 (HY000): Can't create database" in str(e):
                 print("Database 'alx_book_store' already exists!")
             else:
@@ -24,7 +24,7 @@ def create_database():
           finally:
         
             mycursor.close()
-    except Error as e:
+    except  mysql.connector.Error as e:
        print(f"Error connecting to MySQL: {e}")
     finally:
         if mydb.is_connected():
